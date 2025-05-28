@@ -45,7 +45,7 @@ Installation Issues: ...
 """
 
         response = client.chat.completions.create(
-            model="meta-llama/llama-guard-4-12b",
+            model="llama3-8b-8192",
             messages=[
                 {"role": "system", "content": "You are a helpful solar advisor."},
                 {"role": "user", "content": prompt}

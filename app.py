@@ -8,6 +8,8 @@ from groq import Groq
 from dotenv import load_dotenv
 import traceback
 
+
+
 # --- Streamlit Config (MUST BE FIRST) ---
 st.set_page_config(
     page_title="SolarScope - Rooftop Analysis",
@@ -20,9 +22,9 @@ load_dotenv()  # Load environment variables from .env file
 
 # --- Groq API setup ---
 try:
-    GROQ_API_KEY = os.getenv("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY")
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY") 
     if not GROQ_API_KEY:
-        st.error("❌ GROQ_API_KEY not found. Please set it in .env file or Streamlit secrets.")
+        st.error(" GROQ_API_KEY not found. Please set it in .env file or Streamlit secrets.")
         st.stop()
     
     client = Groq(api_key=GROQ_API_KEY)
