@@ -4,3 +4,4 @@ torch
 Pillow
 python-dotenv
 streamlit
+groq
